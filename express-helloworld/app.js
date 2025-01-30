@@ -8,9 +8,13 @@ app.get('/', function (req, res) {
 app.get('/mars', function(req, res) {
   res.send('Hello Mars!\n');
 });
-app.get('/data',()=>{
+app.get('/data',(req,res)=>{
   res.send("whether api")
 })
+app.get("/mars",(req,res)=>{
+  res.send("hello")
+})
+
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
